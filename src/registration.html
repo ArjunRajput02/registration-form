@@ -21,6 +21,7 @@
         <form class="space-y-4" action="registration-success.html">
             <!-- Title-->
           <select class="w-full border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');" required>
+            <option value="" disabled selected hidden>Title</option>
             <option>Mr.</option>
             <option>Ms.</option>
             <option>Mrs.</option>
@@ -31,19 +32,20 @@
               type="text"
               placeholder="First Name"
               class="w-full sm:w-1/2 border rounded-md px-3 py-2"
-
+              pattern="[A-Za-z]+"
               required
             />
             <input
               type="text"
               placeholder="Last Name"
               class="w-full sm:w-1/2 border rounded-md px-3 py-2"
-
+              pattern="[A-Za-z]+"
               required
             />
           </div>
          <!-- Position -->
           <select  class="w-full border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');"required>
+            <option value="" disabled selected hidden>Position</option>
             <option>Manager</option>
             <option>Developer</option>
           </select>
@@ -52,6 +54,7 @@
             type="text"
             placeholder="Position"
             class="w-full border rounded-md px-3 py-2"
+            pattern="[A-Za-z]+"
             required
           />
         <!-- Business Area -->
@@ -60,13 +63,15 @@
               type="text"
               placeholder="Business Area"
               class="w-full sm:w-1/2 border rounded-md px-3 py-2"
+              pattern="[A-Za-z]+"
               required
             />
             <select
               class="w-full sm:w-1/2 border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');" required
             >
-              <option>Employees</option>
+              <option value="" disabled selected hidden>Employees</option>
               <option>Interns</option>
+              <option>Developers</option>
               <option>Human Resources</option>
             </select>
           </div>
@@ -100,7 +105,8 @@
             <input
               type="text"
               placeholder="Zip Code"
-              max="6"
+              maxlength="6"
+              pattern="[0-9]{6}"
               class="w-full sm:w-2/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
              required
               />
@@ -115,6 +121,7 @@
           <input
             type="text"
             placeholder="Country"
+            pattern="[A-Za-z]+"
             class="w-full border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
             required
           />
@@ -123,12 +130,16 @@
             <input
               type="text"
               placeholder="Code +"
+              pattern="[0-9]{2}"
+              maxlength="2"
               class="w-full sm:w-1/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
               required
             />
             <input
               type="text"
               placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              maxlength="10"
               class="w-full sm:w-5/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
               required
             />
@@ -144,9 +155,9 @@
           <div class="flex items-center gap-2 text-sm">
             <input type="checkbox" class="accent-white" required />
             <span>
-              I accept the
+              I do accept the
               <a href="#" class="underline">Terms and Conditions</a>
-              Of Your Site
+              of your site
             </span>
           </div>
 
