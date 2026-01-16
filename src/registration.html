@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link href="registration.css" rel="stylesheet" />
+  </head>
+<!-- Page Layout Content -->
+  <body class="min-h-screen bg-slate-100 flex items-center justify-center px-4">
+    <!-- Main Container -->
+    <div
+      class="w-full max-w-5xl bg-sky-400 rounded-xl shadow-xl overflow-hidden flex flex-col lg:flex-row"
+    >
+    <!--General Information-->
+      <div class="w-full lg:w-1/2 p-8 sm:p-10 bg-amber-50">
+        <h2 class="text-xl font-semibold text-indigo-800 mb-6">
+          General Information
+        </h2>
+        <!-- form start-->
+        <form class="space-y-4" action="registration-success.html">
+            <!-- Title-->
+          <select class="w-full border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');" required>
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+          </select>
+       <!-- First and Last Name-->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="First Name"
+              class="w-full sm:w-1/2 border rounded-md px-3 py-2"
+
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="w-full sm:w-1/2 border rounded-md px-3 py-2"
+
+              required
+            />
+          </div>
+         <!-- Position -->
+          <select  class="w-full border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');"required>
+            <option>Manager</option>
+            <option>Developer</option>
+          </select>
+         <!-- Position Dropdown -->
+          <input
+            type="text"
+            placeholder="Position"
+            class="w-full border rounded-md px-3 py-2"
+            required
+          />
+        <!-- Business Area -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="Business Area"
+              class="w-full sm:w-1/2 border rounded-md px-3 py-2"
+              required
+            />
+            <select
+              class="w-full sm:w-1/2 border rounded-md px-3 py-2 text-gray-500" onchange="this.classList.remove('text-gray-500');" required
+            >
+              <option>Employees</option>
+              <option>Interns</option>
+              <option>Human Resources</option>
+            </select>
+          </div>
+        
+      </div>
+
+     <!-- Contact Details -->
+      <div
+        class="w-full lg:w-1/2 p-8 sm:p-10 linear-to-b from-indigo-500 to-blue-500">
+      
+        <h2 class="text-xl font-semibold text-white mb-6">
+          Contact Details
+        </h2>
+      <!-- Street Address-->
+        <div class="space-y-4 text-white">
+          <input
+            type="text"
+            placeholder="St+Near"
+            class="w-full border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+            required
+          />
+       <!-- Additional Information-->
+          <input
+            type="text"
+            placeholder="Additional Information"
+            class="w-full border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+            required
+            />
+        <!-- Zip Code and Place-->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="Zip Code"
+              max="6"
+              class="w-full sm:w-2/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+             required
+              />
+            <input
+              type="text"
+              placeholder="Place"
+              class="w-full sm:w-4/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+              required
+              />
+          </div>
+    <!-- Country -->
+          <input
+            type="text"
+            placeholder="Country"
+            class="w-full border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+            required
+          />
+     <!-- Phone No.-->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="Code +"
+              class="w-full sm:w-1/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Phone Number"
+              class="w-full sm:w-5/6 border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+              required
+            />
+          </div>
+        <!-- Email Address-->
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full border border-white bg-transparent rounded-md px-3 py-2 placeholder-white"
+            required
+          />
+       <!-- Terms and Conditions Checkbox and Register Button-->
+          <div class="flex items-center gap-2 text-sm">
+            <input type="checkbox" class="accent-white" required />
+            <span>
+              I accept the
+              <a href="#" class="underline">Terms and Conditions</a>
+              Of Your Site
+            </span>
+          </div>
+
+          <button
+            class="mt-4 bg-white text-indigo-600 font-semibold px-6 py-2 rounded-md hover:bg-indigo-100 transition"
+          type="submit">
+            Register
+          </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
